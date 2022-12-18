@@ -1,49 +1,0 @@
-Input Notebook:  copia_chustera.ipynb
-Output Notebook: out_2_chustera.ipynb
-Executing:   0%|          | 0/9 [00:00<?, ?cell/s]Executing notebook with kernel: python3
-Executing:  11%|█         | 1/9 [00:01<00:15,  1.95s/cell]Executing:  22%|██▏       | 2/9 [00:24<01:36, 13.78s/cell]Executing:  56%|█████▌    | 5/9 [00:24<00:16,  4.03s/cell]2022-11-11 08:11:22.460683: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1
-To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2022-11-11 08:11:22.462185: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
-Executing:  78%|███████▊  | 7/9 [23:14:13<9:25:10, 16955.34s/cell]Executing:  78%|███████▊  | 7/9 [23:14:16<6:38:21, 11950.94s/cell]
-Traceback (most recent call last):
-  File "/home/arturoSF/.conda/envs/tenflow/bin/papermill", line 10, in <module>
-    sys.exit(papermill())
-  File "/home/arturoSF/.conda/envs/tenflow/lib/python3.7/site-packages/click/core.py", line 1128, in __call__
-    return self.main(*args, **kwargs)
-  File "/home/arturoSF/.conda/envs/tenflow/lib/python3.7/site-packages/click/core.py", line 1053, in main
-    rv = self.invoke(ctx)
-  File "/home/arturoSF/.conda/envs/tenflow/lib/python3.7/site-packages/click/core.py", line 1395, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-  File "/home/arturoSF/.conda/envs/tenflow/lib/python3.7/site-packages/click/core.py", line 754, in invoke
-    return __callback(*args, **kwargs)
-  File "/home/arturoSF/.conda/envs/tenflow/lib/python3.7/site-packages/click/decorators.py", line 26, in new_func
-    return f(get_current_context(), *args, **kwargs)
-  File "/home/arturoSF/.conda/envs/tenflow/lib/python3.7/site-packages/papermill/cli.py", line 267, in papermill
-    execution_timeout=execution_timeout,
-  File "/home/arturoSF/.conda/envs/tenflow/lib/python3.7/site-packages/papermill/execute.py", line 122, in execute_notebook
-    raise_for_execution_errors(nb, output_path)
-  File "/home/arturoSF/.conda/envs/tenflow/lib/python3.7/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
-    raise error
-papermill.exceptions.PapermillExecutionError: 
----------------------------------------------------------------------------
-Exception encountered at "In [7]":
----------------------------------------------------------------------------
-MemoryError                               Traceback (most recent call last)
-/tmp/ipykernel_586762/1457739951.py in <module>
-     16         x_train_list,x_test_list,y_train_list,y_test_list=loaddata4use.load_dataset_completo(npy_final_dir,labels_asign=[0,1,2,2,2,2,2],elements=elements,
-     17                                                                                              main_list_runs=list_runs,pre_name_folders="npy_",telescopes=[1,2,3,4],
----> 18                                                                                              test_size=0.05,same_quant="same",verbose=True,fill=True,categorical=True)
-     19         x_train_list=cambiar_ejes_lista(x_train_list)
-     20         x_test_list=cambiar_ejes_lista(x_test_list)
-
-~/cta_proyect/src/CTA-data-analisis-library/loaddata4use.py in load_dataset_completo(npy_base_dir, main_list_runs, telescopes, labels_asign, elements, pre_name_folders, test_size, same_quant, verbose, fill, categorical)
-    718                     label_size=data_aux.shape[0]
-    719                     labels=np.concatenate((labels,np.ones(label_size)*labels_asign[i]),axis=0)
---> 720                 data=np.concatenate((data,data_aux),axis=0)
-    721                 del data_aux
-    722         #new we add a new channel/axis, and turn into categorical the labels if required
-
-<__array_function__ internals> in concatenate(*args, **kwargs)
-
-MemoryError: Unable to allocate 269. MiB for an array with shape (6881, 93, 55) and data type float64
-
