@@ -1,0 +1,10 @@
+Con arquitectura: [[12, 16], [32, 64], [64, 12]] : 
+Boostrap 0 de 2,runs: [[17, 49], [69, 3, 145, 58, 11, 122, 126, 139, 149, 140, 116]] 
+Con arquitectura: [[12, 16], [32, 64], [64, 12]], y uso de CPU 0Mb 
+Boostrap 0 de 2,runs: [[1, 38], [38, 149, 29, 63, 117, 156, 148, 7, 43, 15, 150]], y uso de CPU 0Mb 
+Boostrap 1 de 2,runs: [[18, 22], [140, 138, 76, 94, 42, 83, 107, 144, 28, 33, 100]], y uso de CPU 2Mb 
+
+Con arquitectura: [[12, 16, 32], [64, 128], [128, 64, 32]], y uso de CPU 5Mb 
+Boostrap 0 de 2,runs: [[23, 41], [15, 65, 113, 111, 94, 154, 17, 93, 145, 150, 14]], y uso de CPU 5Mb 
+Boostrap 1 de 2,runs: [[23, 39], [20, 113, 113, 74, 117, 53, 90, 18, 106, 45, 24]], y uso de CPU 10Mb 
+
