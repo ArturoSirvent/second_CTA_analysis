@@ -1,0 +1,2 @@
+Con arquitectura: [[12, 16], [32, 64], [64, 12]], y uso de CPU 0Mb 
+Boostrap 1 de 7,runs: [[14, 20], [63, 112, 56, 29, 35, 14, 19, 103, 70, 12, 79]], y uso de CPU 0Mb 
