@@ -1,0 +1,40 @@
+Con arquitectura: [[32, 64], [64, 64], [32, 16]] : 
+Boostrap 1 de 7,runs: [[33], [111, 4], [147, 71], [36, 44], [116, 103], [92, 29], [3, 78]],y uso memoria CPU antes carga datos: 0Mb 	Y uso memoria CPU después carga datos: 0Mb 
+Boostrap 2 de 7,runs: [[15], [124, 104], [86, 111], [80, 126], [117, 125], [108, 36], [128, 73]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Boostrap 3 de 7,runs: [[22], [136, 39], [12, 25], [65, 118], [133, 8], [45, 131], [96, 29]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Boostrap 4 de 7,runs: [[29], [72, 148], [128, 77], [51, 58], [139, 114], [24, 87], [73, 69]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Boostrap 5 de 7,runs: [[10], [111, 100], [148, 54], [42, 129], [50, 140], [106, 98], [22, 130]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Boostrap 6 de 7,runs: [[22], [63, 74], [159, 137], [26, 96], [99, 29], [102, 25], [120, 43]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Boostrap 7 de 7,runs: [[18], [96, 28], [51, 52], [16, 40], [70, 84], [153, 99], [108, 134]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Con arquitectura: [[12, 16, 32], [64, 128], [128, 64, 32]] : 
+Boostrap 1 de 7,runs: [[11], [55, 85], [64, 6], [37, 6], [144, 28], [95, 119], [27, 131]],y uso memoria CPU antes carga datos: 5Mb 	Y uso memoria CPU después carga datos: 5Mb 
+Boostrap 2 de 7,runs: [[25], [149, 140], [76, 155], [5, 126], [85, 37], [51, 132], [119, 45]],y uso memoria CPU antes carga datos: 7Mb 	Y uso memoria CPU después carga datos: 7Mb 
+Boostrap 3 de 7,runs: [[45], [63, 58], [46, 34], [75, 128], [86, 159], [99, 132], [89, 35]],y uso memoria CPU antes carga datos: 7Mb 	Y uso memoria CPU después carga datos: 7Mb 
+Boostrap 4 de 7,runs: [[41], [18, 109], [8, 42], [39, 123], [118, 162], [126, 129], [35, 61]],y uso memoria CPU antes carga datos: 7Mb 	Y uso memoria CPU después carga datos: 7Mb 
+Boostrap 5 de 7,runs: [[31], [62, 123], [111, 104], [26, 99], [127, 73], [96, 114], [109, 78]],y uso memoria CPU antes carga datos: 7Mb 	Y uso memoria CPU después carga datos: 7Mb 
+Boostrap 6 de 7,runs: [[6], [47, 103], [2, 110], [34, 38], [2, 90], [9, 153], [12, 8]],y uso memoria CPU antes carga datos: 7Mb 	Y uso memoria CPU después carga datos: 7Mb 
+Boostrap 7 de 7,runs: [[31], [26, 65], [51, 24], [57, 56], [92, 92], [112, 143], [89, 93]],y uso memoria CPU antes carga datos: 7Mb 	Y uso memoria CPU después carga datos: 7Mb 
+Con arquitectura: [[12, 16], [32, 64], [64, 12]] : 
+Boostrap 1 de 7,runs: [[49], [38, 142], [97, 10], [94, 11], [100, 160], [90, 4], [85, 69]],y uso memoria CPU antes carga datos: 7Mb 	Y uso memoria CPU después carga datos: 7Mb 
+Boostrap 2 de 7,runs: [[44], [22, 127], [145, 129], [105, 42], [96, 25], [50, 133], [129, 5]],y uso memoria CPU antes carga datos: 1Mb 	Y uso memoria CPU después carga datos: 1Mb 
+Boostrap 3 de 7,runs: [[40], [72, 143], [81, 141], [47, 43], [132, 26], [118, 66], [3, 52]],y uso memoria CPU antes carga datos: 1Mb 	Y uso memoria CPU después carga datos: 1Mb 
+Boostrap 4 de 7,runs: [[39], [80, 90], [77, 8], [23, 28], [6, 58], [75, 127], [31, 12]],y uso memoria CPU antes carga datos: 2Mb 	Y uso memoria CPU después carga datos: 2Mb 
+Boostrap 5 de 7,runs: [[6], [19, 108], [66, 7], [127, 42], [28, 93], [7, 98], [60, 23]],y uso memoria CPU antes carga datos: 1Mb 	Y uso memoria CPU después carga datos: 1Mb 
+Boostrap 6 de 7,runs: [[28], [75, 127], [47, 11], [104, 37], [77, 162], [76, 112], [66, 56]],y uso memoria CPU antes carga datos: 1Mb 	Y uso memoria CPU después carga datos: 1Mb 
+Boostrap 7 de 7,runs: [[14], [123, 113], [140, 75], [22, 117], [68, 147], [96, 26], [128, 7]],y uso memoria CPU antes carga datos: 2Mb 	Y uso memoria CPU después carga datos: 2Mb 
+Con arquitectura: [[32, 64], [128, 64], [64, 12]] : 
+Boostrap 1 de 7,runs: [[41], [112, 44], [159, 106], [84, 16], [67, 1], [93, 68], [53, 106]],y uso memoria CPU antes carga datos: 2Mb 	Y uso memoria CPU después carga datos: 2Mb 
+Boostrap 2 de 7,runs: [[38], [4, 26], [83, 65], [121, 111], [132, 65], [11, 99], [9, 89]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Boostrap 3 de 7,runs: [[6], [47, 16], [59, 121], [38, 107], [71, 5], [3, 105], [33, 114]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Boostrap 4 de 7,runs: [[31], [23, 85], [141, 46], [24, 58], [63, 67], [3, 3], [90, 33]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Boostrap 5 de 7,runs: [[12], [18, 37], [156, 159], [43, 82], [120, 166], [16, 66], [134, 22]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Boostrap 6 de 7,runs: [[5], [99, 47], [119, 92], [100, 123], [49, 83], [118, 150], [61, 40]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Boostrap 7 de 7,runs: [[37], [68, 25], [65, 118], [78, 112], [37, 160], [131, 114], [18, 124]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Con arquitectura: [[12, 16, 32], [32, 64, 128], [64, 32, 16]] : 
+Boostrap 1 de 7,runs: [[22], [37, 121], [64, 54], [104, 86], [42, 68], [86, 52], [122, 93]],y uso memoria CPU antes carga datos: 4Mb 	Y uso memoria CPU después carga datos: 4Mb 
+Boostrap 2 de 7,runs: [[49], [65, 88], [80, 147], [104, 14], [34, 123], [104, 75], [36, 22]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Boostrap 3 de 7,runs: [[15], [107, 143], [70, 97], [46, 74], [41, 73], [121, 16], [125, 38]],y uso memoria CPU antes carga datos: 4Mb 	Y uso memoria CPU después carga datos: 4Mb 
+Boostrap 4 de 7,runs: [[34], [72, 113], [21, 159], [55, 79], [164, 106], [133, 137], [14, 105]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Boostrap 5 de 7,runs: [[6], [88, 19], [73, 19], [129, 111], [163, 133], [104, 90], [31, 21]],y uso memoria CPU antes carga datos: 4Mb 	Y uso memoria CPU después carga datos: 4Mb 
+Boostrap 6 de 7,runs: [[33], [154, 21], [69, 104], [26, 62], [43, 101], [101, 144], [32, 133]],y uso memoria CPU antes carga datos: 3Mb 	Y uso memoria CPU después carga datos: 3Mb 
+Boostrap 7 de 7,runs: [[34], [10, 109], [69, 4], [16, 102], [50, 26], [6, 63], [93, 72]],y uso memoria CPU antes carga datos: 4Mb 	Y uso memoria CPU después carga datos: 4Mb 

@@ -106,41 +106,40 @@ opciones_filtros=[
 
 # %%
 device = cuda.get_current_device()
-
-with open("../modelos/2_data_control.txt","w") as registro:
-    n=6 #repes de boostrap
-    #primer bucle para arquitecturas
-    for i,arch in enumerate(opciones_filtros):
-        print(f"{i}: {arch} \n")
-        modelo=models.model_multi_tel(classes=3,filtros=arch,last_dense=[20,5])
-        modelo.compile(optimizer="adam",loss="categorical_crossentropy",metrics=["acc","AUC","mean_squared_error"])
+file_number="002"
+n=7 #repes de boostrap
+#primer bucle para arquitecturas
+for i,arch in enumerate(opciones_filtros):
+    print(f"{i}: {arch} \n")
+    modelo=models.model_multi_tel(classes=3,filtros=arch,last_dense=[20,5])
+    modelo.compile(optimizer="adam",loss="categorical_crossentropy",metrics=["acc","AUC","mean_squared_error"])
+    with open(f"../automat/logs/{file_number}_data_control.txt","a") as registro:
         registro.write(f"Con arquitectura: {arch} : \n")
 
-        #segundo_bucle para boostrap
-        for k in range(n):
-            print(f"\n Boostrap {k+1} de {n}, y uso memoria CPU: {tf.config.experimental.get_memory_info('CPU:0')['current']>>20}mB\n")
+    #segundo_bucle para boostrap
+    for k in range(n):
+        print(f"\n Boostrap {k+1} de {n}, y uso memoria CPU: {tf.config.experimental.get_memory_info('CPU:0')['current']>>20}mB\n")
 
-            list_runs=new_create_main_list_runs([1,7,7,7,7,7,7],chose_runs)
-            registro.write(f"Boostrap {k} de {n},runs: {list_runs},y uso memoria CPU: {tf.config.experimental.get_memory_info('CPU:0')['current']>>20}Mb \n")
-            x_train_list,x_test_list,y_train_list,y_test_list=loaddata4use.load_dataset_completo(npy_final_dir,labels_asign=[0,1,2,2,2,2,2],elements=elements,
-                                                                                                main_list_runs=list_runs,pre_name_folders="npy_",telescopes=[1,2,3,4],
-                                                                                                test_size=0.1,same_quant="same",verbose=True,fill=True,categorical=True)
-            x_train_list=cambiar_ejes_lista(x_train_list)
-            x_test_list=cambiar_ejes_lista(x_test_list)
+        list_runs=new_create_main_list_runs([1,7,7,7,7,7,7],chose_runs)
+        with open(f"../automat/logs/{file_number}_data_control.txt","a") as registro:
+            registro.write(f"Boostrap {k+1} de {n},runs: {list_runs},y uso memoria CPU: {tf.config.experimental.get_memory_info('CPU:0')['current']>>20}Mb \n")
+        x_train_list,x_test_list,y_train_list,y_test_list=loaddata4use.load_dataset_completo(npy_final_dir,labels_asign=[0,1,2,2,2,2,2],elements=elements,
+                                                                                            main_list_runs=list_runs,pre_name_folders="npy_",telescopes=[1,2,3,4],
+                                                                                            test_size=0.1,same_quant="same",verbose=True,fill=True,categorical=True)
+        x_train_list=cambiar_ejes_lista(x_train_list)
+        x_test_list=cambiar_ejes_lista(x_test_list)
 
-            
-            hist=modelo.fit(x=x_train_list,y=y_train_list,epochs=5, validation_data=(x_test_list,y_test_list),batch_size=64)            
-            gc.collect()
-            del x_train_list,x_test_list,y_train_list,y_test_list
-            modelo.save(f"../modelos/2_modelo_filtro_{i}_en_boostrap_stage_{k+1}.h5")
-            with open(f"../modelos/performances/2_history_modelo_filtro_{i}_en_boostrap_stage_{k+1}.pickle","wb") as pick:
-                pickle.dump(hist,pick)
-        registro.write("\n")            
+        
+        hist=modelo.fit(x=x_train_list,y=y_train_list,epochs=5, validation_data=(x_test_list,y_test_list),batch_size=64)            
         gc.collect()
-        del modelo 
-        tf.keras.backend.clear_session()
-        device.reset()
-            
+        del x_train_list,x_test_list,y_train_list,y_test_list
+        modelo.save(f"../modelos/{file_number}_modelo_filtro_{i}_en_boostrap_stage_{k+1}.h5")
+        with open(f"../modelos/performances/{file_number}_history_modelo_filtro_{i}_en_boostrap_stage_{k+1}.pickle","wb") as pick:
+            pickle.dump(hist,pick)
+    gc.collect()
+    del modelo 
+    tf.keras.backend.clear_session()
+    device.reset()
 
 
 # %% [markdown]

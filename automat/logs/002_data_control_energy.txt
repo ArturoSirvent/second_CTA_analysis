@@ -1,2 +1,18 @@
 Con arquitectura: [[12, 16], [32, 64], [64, 12]], y uso de CPU 0Mb 
 Boostrap 1 de 7,runs: [[14, 20], [63, 112, 56, 29, 35, 14, 19, 103, 70, 12, 79]], y uso de CPU 0Mb 
+Boostrap 2 de 7,runs: [[37, 37], [72, 159, 17, 139, 138, 39, 77, 20, 109, 110, 151]], y uso de CPU 1Mb 
+Boostrap 3 de 7,runs: [[44, 20], [22, 142, 60, 156, 144, 106, 91, 83, 3, 28, 152]], y uso de CPU 1Mb 
+Boostrap 4 de 7,runs: [[17, 23], [88, 118, 21, 47, 3, 106, 63, 42, 124, 12, 159]], y uso de CPU 1Mb 
+Boostrap 5 de 7,runs: [[7, 15], [65, 35, 100, 26, 1, 145, 87, 95, 47, 23, 88]], y uso de CPU 1Mb 
+Boostrap 6 de 7,runs: [[49, 29], [16, 109, 33, 53, 45, 89, 80, 155, 19, 25, 38]], y uso de CPU 1Mb 
+Boostrap 7 de 7,runs: [[48, 6], [93, 66, 74, 35, 129, 43, 14, 38, 4, 37, 27]], y uso de CPU 1Mb 
+Con arquitectura: [[12, 16, 32], [64, 128], [128, 64, 32]], y uso de CPU 3Mb 
+Boostrap 1 de 7,runs: [[25, 36], [126, 114, 21, 56, 37, 127, 129, 23, 145, 72, 92]], y uso de CPU 3Mb 
+Boostrap 2 de 7,runs: [[27, 7], [124, 130, 106, 10, 107, 25, 103, 105, 152, 25, 27]], y uso de CPU 6Mb 
+Boostrap 3 de 7,runs: [[43, 14], [139, 120, 27, 83, 43, 121, 16, 53, 51, 64, 128]], y uso de CPU 6Mb 
+Boostrap 4 de 7,runs: [[13, 21], [28, 120, 22, 3, 107, 87, 105, 123, 89, 67, 37]], y uso de CPU 6Mb 
+Boostrap 5 de 7,runs: [[11, 28], [24, 124, 128, 76, 26, 84, 30, 114, 88, 92, 156]], y uso de CPU 6Mb 
+Boostrap 6 de 7,runs: [[36, 10], [28, 100, 88, 100, 40, 72, 30, 41, 24, 139, 75]], y uso de CPU 6Mb 
+Boostrap 7 de 7,runs: [[40, 21], [153, 25, 81, 17, 44, 90, 114, 40, 129, 152, 117]], y uso de CPU 6Mb 
+Con arquitectura: [[64, 128], [128, 254, 64], [32]], y uso de CPU 9Mb 
+Boostrap 1 de 7,runs: [[49, 48], [155, 61, 144, 93, 95, 12, 123, 51, 7, 14, 141]], y uso de CPU 9Mb 
