@@ -82,3 +82,5 @@ Al borrar memoria nos quedan 0 Mb
 Boostrap 4 de 18,runs: [[28], [44, 156, 9, 56, 58, 25, 7, 67, 130, 83]], y uso de CPU 1Mb, y memoria 0 Mb 
 Al borrar memoria nos quedan 0 Mb 
 Boostrap 5 de 18,runs: [[12], [7, 141, 156, 9, 74, 87, 122, 109, 29, 96]], y uso de CPU 1Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 6 de 18,runs: [[11], [122, 81, 117, 79, 33, 9, 153, 53, 99, 100]], y uso de CPU 2Mb, y memoria 0 Mb 

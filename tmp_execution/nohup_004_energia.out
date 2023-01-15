@@ -1,0 +1,30 @@
+nohup: ignoring input
+2023-01-15 05:39:55.646970: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Modelo: 0
+
+
+ Boostrap 1 de 18, y uso de CPU 3Mb, y memoria 0 Mb 
+
+Load of names and common events
+_______________
+Element:  gamma  , Runs:  [11, 48]  Shape of common events (common events, energies):  (4, 1086) (4, 1086)
+Element:  gamma  , Runs:  [11, 48]  Shape of common events (common events, energies):  (4, 1109) (4, 1109)
+Element:  electron  , Runs:  [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]  Shape of common events (common events, energies):  (4, 252) (4, 252)
+Element:  electron  , Runs:  [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]  Shape of common events (common events, energies):  (4, 229) (4, 229)
+Element:  electron  , Runs:  [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]  Shape of common events (common events, energies):  (4, 263) (4, 263)
+Element:  electron  , Runs:  [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]  Shape of common events (common events, energies):  (4, 228) (4, 228)
+Element:  electron  , Runs:  [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]  Shape of common events (common events, energies):  (4, 245) (4, 245)
+Element:  electron  , Runs:  [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]  Shape of common events (common events, energies):  (4, 228) (4, 228)
+Element:  electron  , Runs:  [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]  Shape of common events (common events, energies):  (4, 239) (4, 239)
+Element:  electron  , Runs:  [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]  Shape of common events (common events, energies):  (4, 226) (4, 226)
+Element:  electron  , Runs:  [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]  Shape of common events (common events, energies):  (4, 238) (4, 238)
+Element:  electron  , Runs:  [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]  Shape of common events (common events, energies):  (4, 242) (4, 242)
+Element:  electron  , Runs:  [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]  Shape of common events (common events, energies):  (4, 270) (4, 270)
+Element:  electron  , Runs:  [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]  Shape of common events (common events, energies):  (4, 238) (4, 238)
+Element:  electron  , Runs:  [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]  Shape of common events (common events, energies):  (4, 252) (4, 252)
+Element:  electron  , Runs:  [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]  Shape of common events (common events, energies):  (4, 252) (4, 252)
+_______________
+Load of actual npy data:
+_______________
+2195

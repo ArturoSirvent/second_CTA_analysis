@@ -1,2 +1,4 @@
 Con modelo: <keras.layers.core.dense.Dense object at 0x7f8ebf26da50>, y uso de CPU 7Mb, y memoria 0 Mb 
 Boostrap 1 de 18,runs: [[14, 42], [28, 80, 23, 27, 141, 122, 88, 15, 153, 67, 88, 70, 51, 19]], y uso de CPU 7Mb, y memoria 0 Mb 
+Con modelo: <keras.layers.core.dense.Dense object at 0x7f0961d91d50>, y uso de CPU 3Mb, y memoria 0 Mb 
+Boostrap 1 de 18,runs: [[11, 48], [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]], y uso de CPU 3Mb, y memoria 0 Mb 
