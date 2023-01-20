@@ -101,8 +101,8 @@ for i,modelo_name in enumerate(lista_modelos_to_use):
     modelo2=tf.keras.models.Model(inputs=modelo.input,outputs=tf.keras.layers.Dense(1,name="asdf")(modelo.output))
 
     count=0
-    for i in modelo2.layers:
-        if str(type(i))=="<class 'keras.layers.core.dense.Dense'>":
+    for m in modelo2.layers:
+        if str(type(m))=="<class 'keras.layers.core.dense.Dense'>":
             count+=1
 
 

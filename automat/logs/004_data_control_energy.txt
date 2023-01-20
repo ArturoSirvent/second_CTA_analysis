@@ -2,3 +2,186 @@ Con modelo: <keras.layers.core.dense.Dense object at 0x7f8ebf26da50>, y uso de C
 Boostrap 1 de 18,runs: [[14, 42], [28, 80, 23, 27, 141, 122, 88, 15, 153, 67, 88, 70, 51, 19]], y uso de CPU 7Mb, y memoria 0 Mb 
 Con modelo: <keras.layers.core.dense.Dense object at 0x7f0961d91d50>, y uso de CPU 3Mb, y memoria 0 Mb 
 Boostrap 1 de 18,runs: [[11, 48], [17, 77, 1, 35, 84, 67, 140, 40, 27, 53, 154, 27, 108, 25]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 2 de 18,runs: [[33, 7], [12, 145, 21, 93, 127, 110, 87, 126, 124, 139, 51, 63, 8, 23]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 3 de 18,runs: [[11, 36], [39, 109, 120, 25, 121, 7, 120, 138, 144, 100, 79, 140, 24, 63]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 4 de 18,runs: [[6, 14], [91, 126, 85, 141, 31, 116, 41, 45, 140, 87, 24, 85, 38, 114]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 5 de 18,runs: [[42, 10], [155, 154, 112, 114, 39, 109, 160, 89, 109, 53, 103, 136, 56, 136]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 6 de 18,runs: [[39, 35], [136, 143, 159, 127, 109, 58, 105, 155, 90, 18, 53, 153, 51, 14]], y uso de CPU 4Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 7 de 18,runs: [[40, 29], [83, 96, 106, 31, 45, 144, 31, 155, 142, 27, 30, 4, 8, 41]], y uso de CPU 4Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 8 de 18,runs: [[21, 24], [152, 28, 96, 69, 93, 66, 25, 100, 77, 25, 112, 69, 153, 35]], y uso de CPU 4Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 9 de 18,runs: [[36, 39], [75, 42, 107, 139, 45, 87, 110, 72, 107, 19, 85, 112, 150, 81]], y uso de CPU 4Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 10 de 18,runs: [[42, 44], [20, 3, 39, 96, 63, 87, 21, 103, 145, 67, 141, 85, 62, 3]], y uso de CPU 4Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 11 de 18,runs: [[28, 13], [124, 8, 129, 21, 105, 31, 126, 47, 41, 100, 94, 142, 109, 74]], y uso de CPU 4Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 12 de 18,runs: [[34, 24], [63, 145, 64, 31, 56, 47, 21, 103, 37, 110, 35, 153, 84, 150]], y uso de CPU 5Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 13 de 18,runs: [[18], [117, 76, 27, 64, 142, 31, 90, 62]], y uso de CPU 5Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 14 de 18,runs: [[25], [90, 155, 10, 58, 28, 129, 130, 31]], y uso de CPU 6Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 15 de 18,runs: [[24], [143, 7, 130, 37, 118, 1, 152, 121]], y uso de CPU 6Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 16 de 18,runs: [[35], [62, 18, 45, 35, 3, 110, 100, 74]], y uso de CPU 6Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 17 de 18,runs: [[35], [13, 160, 44, 67, 55, 76, 88, 126]], y uso de CPU 6Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 18 de 18,runs: [[41], [128, 28, 124, 148, 14, 127, 109, 72]], y uso de CPU 6Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Con modelo: <keras.layers.core.dense.Dense object at 0x7f095f74b0d0>, y uso de CPU 5Mb, y memoria 0 Mb 
+Boostrap 1 de 18,runs: [[14], [123, 143, 140, 43, 140, 92, 67, 112]], y uso de CPU 5Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 2 de 18,runs: [[1], [106, 156, 9, 1, 72, 139, 47, 44]], y uso de CPU 4Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 3 de 18,runs: [[15], [44, 76, 47, 62, 29, 3, 72, 21]], y uso de CPU 4Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 4 de 18,runs: [[41], [151, 145, 67, 130, 111, 89, 124, 153]], y uso de CPU 4Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 5 de 18,runs: [[15], [84, 154, 76, 150, 76, 99, 150, 128]], y uso de CPU 4Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 6 de 18,runs: [[18], [30, 110, 156, 103, 8, 88, 159, 100]], y uso de CPU 6Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 7 de 18,runs: [[37], [12, 64, 38, 88, 80, 138, 47, 74]], y uso de CPU 6Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 8 de 18,runs: [[34], [30, 87, 99, 111, 61, 45, 85, 4]], y uso de CPU 6Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 9 de 18,runs: [[20], [18, 33, 145, 129, 117, 105, 65, 10]], y uso de CPU 6Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 10 de 18,runs: [[22], [69, 14, 23, 124, 55, 30, 28, 72]], y uso de CPU 6Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 11 de 18,runs: [[14], [10, 89, 26, 17, 47, 23, 40, 73]], y uso de CPU 6Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 12 de 18,runs: [[21], [64, 1, 118, 70, 113, 15, 92, 12]], y uso de CPU 7Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 13 de 18,runs: [[6], [58, 80, 122, 31, 141, 45, 151, 12]], y uso de CPU 7Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 14 de 18,runs: [[43], [14, 114, 118, 155, 145, 67, 104, 96]], y uso de CPU 8Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 15 de 18,runs: [[5], [120, 155, 47, 76, 1, 3, 155, 30]], y uso de CPU 8Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 16 de 18,runs: [[39], [31, 23, 129, 79, 85, 90, 39, 90]], y uso de CPU 8Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 17 de 18,runs: [[20], [149, 73, 152, 37, 145, 35, 110, 27]], y uso de CPU 8Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 18 de 18,runs: [[22], [12, 19, 19, 81, 12, 18, 44, 24]], y uso de CPU 8Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Con modelo: <keras.layers.core.dense.Dense object at 0x7f09236caf10>, y uso de CPU 6Mb, y memoria 0 Mb 
+Boostrap 1 de 18,runs: [[31], [21, 74, 9, 142, 63, 45, 116, 42]], y uso de CPU 6Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 2 de 18,runs: [[33], [96, 140, 84, 90, 31, 90, 128, 77]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 3 de 18,runs: [[20], [122, 144, 42, 139, 1, 124, 15, 55]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 4 de 18,runs: [[42], [74, 11, 95, 149, 88, 112, 105, 42]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 5 de 18,runs: [[31], [149, 37, 83, 118, 140, 27, 21, 4]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 6 de 18,runs: [[12], [155, 77, 90, 11, 130, 51, 148, 154]], y uso de CPU 5Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 7 de 18,runs: [[6], [81, 8, 123, 74, 81, 1, 126, 14]], y uso de CPU 5Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 8 de 18,runs: [[43], [55, 62, 27, 72, 89, 63, 74, 120]], y uso de CPU 5Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 9 de 18,runs: [[18], [42, 53, 27, 70, 141, 127, 23, 63]], y uso de CPU 5Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 10 de 18,runs: [[18], [111, 124, 84, 122, 127, 41, 121, 156]], y uso de CPU 5Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 11 de 18,runs: [[40], [23, 108, 127, 4, 63, 130, 143, 112]], y uso de CPU 5Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 12 de 18,runs: [[11], [89, 87, 94, 38, 20, 93, 37, 73]], y uso de CPU 6Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 13 de 18,runs: [[10], [58, 94, 130, 159, 8, 55, 16, 58]], y uso de CPU 6Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 14 de 18,runs: [[31], [24, 96, 136, 159, 99, 38, 40, 90]], y uso de CPU 7Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 15 de 18,runs: [[44], [26, 42, 148, 113, 30, 30, 109, 41]], y uso de CPU 7Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 16 de 18,runs: [[14], [105, 19, 124, 95, 75, 23, 151, 20]], y uso de CPU 7Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 17 de 18,runs: [[29], [117, 28, 20, 159, 156, 129, 8, 1]], y uso de CPU 7Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 18 de 18,runs: [[43], [105, 116, 66, 117, 30, 129, 14, 110]], y uso de CPU 7Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Con modelo: <keras.layers.core.dense.Dense object at 0x7f09304a2dd0>, y uso de CPU 9Mb, y memoria 0 Mb 
+Boostrap 1 de 18,runs: [[48], [122, 85, 47, 117, 79, 24, 51, 23]], y uso de CPU 9Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 2 de 18,runs: [[22], [76, 13, 103, 77, 65, 45, 1, 152]], y uso de CPU 7Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 3 de 18,runs: [[44], [155, 93, 108, 20, 31, 148, 113, 69]], y uso de CPU 7Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 4 de 18,runs: [[24], [25, 55, 3, 60, 4, 122, 24, 80]], y uso de CPU 7Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 5 de 18,runs: [[43], [148, 99, 130, 89, 76, 111, 12, 10]], y uso de CPU 7Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 6 de 18,runs: [[12], [10, 40, 67, 76, 136, 159, 156, 9]], y uso de CPU 9Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 7 de 18,runs: [[36], [142, 128, 129, 30, 16, 118, 14, 110]], y uso de CPU 9Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 8 de 18,runs: [[27], [83, 51, 51, 159, 53, 99, 81, 40]], y uso de CPU 9Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 9 de 18,runs: [[13], [159, 17, 117, 28, 92, 70, 62, 63]], y uso de CPU 9Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 10 de 18,runs: [[7], [43, 26, 91, 64, 21, 18, 27, 58]], y uso de CPU 9Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 11 de 18,runs: [[25], [44, 85, 11, 110, 109, 118, 67, 64]], y uso de CPU 9Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 12 de 18,runs: [[41], [72, 118, 61, 80, 143, 110, 151, 148]], y uso de CPU 12Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 13 de 18,runs: [[33], [10, 29, 122, 47, 16, 118, 105, 70]], y uso de CPU 12Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 14 de 18,runs: [[28], [68, 72, 113, 126, 29, 75, 105, 117]], y uso de CPU 14Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 15 de 18,runs: [[23], [10, 148, 45, 67, 111, 47, 8, 14]], y uso de CPU 14Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 16 de 18,runs: [[31], [35, 45, 68, 153, 143, 112, 41, 128]], y uso de CPU 14Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 17 de 18,runs: [[13], [85, 120, 118, 55, 26, 44, 44, 116]], y uso de CPU 14Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 18 de 18,runs: [[37], [148, 154, 69, 160, 145, 29, 39, 144]], y uso de CPU 14Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Con modelo: <keras.layers.core.dense.Dense object at 0x7f0958398f90>, y uso de CPU 8Mb, y memoria 0 Mb 
+Boostrap 1 de 18,runs: [[43], [45, 25, 8, 29, 62, 85, 58, 51]], y uso de CPU 8Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 2 de 18,runs: [[21], [1, 144, 51, 88, 120, 89, 21, 114]], y uso de CPU 2Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 3 de 18,runs: [[22], [110, 62, 63, 13, 47, 106, 122, 39]], y uso de CPU 2Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 4 de 18,runs: [[33], [149, 33, 13, 55, 16, 31, 55, 13]], y uso de CPU 2Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 5 de 18,runs: [[1], [110, 81, 73, 26, 31, 129, 103, 39]], y uso de CPU 2Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 6 de 18,runs: [[43], [47, 12, 1, 79, 14, 95, 35, 96]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 7 de 18,runs: [[43], [100, 129, 117, 92, 68, 122, 87, 156]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 8 de 18,runs: [[23], [109, 23, 16, 126, 37, 106, 156, 95]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 9 de 18,runs: [[24], [148, 24, 123, 73, 62, 65, 103, 90]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 10 de 18,runs: [[5], [107, 130, 142, 116, 14, 100, 109, 160]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 11 de 18,runs: [[7], [15, 159, 111, 124, 155, 38, 67, 151]], y uso de CPU 3Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 12 de 18,runs: [[27], [160, 76, 42, 77, 83, 151, 120, 149]], y uso de CPU 4Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 13 de 18,runs: [[7], [151, 70, 7, 159, 89, 9, 140, 144]], y uso de CPU 4Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 14 de 18,runs: [[5], [13, 127, 130, 105, 22, 148, 11, 81]], y uso de CPU 5Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 15 de 18,runs: [[23], [88, 91, 159, 51, 10, 149, 22, 118]], y uso de CPU 5Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 16 de 18,runs: [[6], [3, 65, 151, 105, 8, 104, 73, 22]], y uso de CPU 5Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 17 de 18,runs: [[6], [3, 136, 16, 23, 129, 43, 25, 118]], y uso de CPU 5Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 18 de 18,runs: [[29], [1, 44, 83, 76, 18, 37, 55, 118]], y uso de CPU 5Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
