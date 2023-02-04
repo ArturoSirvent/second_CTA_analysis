@@ -1,0 +1,33 @@
+Con arquitectura: [[16, 32], [64, 128], [128, 64], [64, 32]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Boostrap 1 de 5,runs: [[49, 31, 45, 7, 14, 11, 22], [67, 120, 151, 56, 4, 84, 44, 160, 123, 35, 61, 154, 154, 39, 152, 145, 92, 76, 35, 35, 23, 68, 122, 129, 77]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 2 de 5,runs: [[6, 15, 25, 14, 48, 38, 20], [16, 53, 10, 90, 143, 152, 117, 109, 151, 106, 141, 1, 99, 91, 55, 127, 138, 124, 53, 56, 88, 77, 100, 41, 65]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 3 de 5,runs: [[10, 48, 49, 5, 37, 1, 1], [45, 129, 127, 142, 149, 95, 123, 106, 42, 120, 60, 75, 84, 90, 72, 25, 129, 118, 122, 83, 114, 33, 7, 37, 124]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 4 de 5,runs: [[15, 10, 33, 22, 24, 43, 41], [3, 61, 124, 111, 20, 74, 141, 68, 31, 90, 63, 11, 35, 148, 108, 8, 130, 64, 69, 69, 160, 45, 44, 72, 13]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 5 de 5,runs: [[44, 21, 41, 5, 20, 41, 24], [123, 42, 26, 11, 63, 58, 138, 41, 95, 14, 84, 154, 47, 69, 151, 42, 117, 154, 37, 73, 105, 14, 138, 53, 63]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Con arquitectura: [[32, 64], [64, 128], [128, 64, 32]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Boostrap 1 de 5,runs: [[36, 43, 17, 36, 41, 20, 5], [30, 21, 58, 74, 105, 141, 8, 106, 106, 150, 128, 84, 144, 120, 18, 156, 17, 19, 148, 151, 128, 120, 91, 156, 150]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 2 de 5,runs: [[28, 34, 14, 27, 5, 24, 12], [13, 113, 76, 112, 56, 27, 62, 39, 66, 17, 61, 81, 17, 104, 151, 95, 66, 37, 113, 16, 95, 75, 159, 60, 44]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 3 de 5,runs: [[24, 42, 20, 35, 13, 20, 45], [149, 99, 61, 26, 12, 64, 120, 116, 110, 122, 107, 84, 160, 74, 143, 67, 65, 53, 8, 118, 141, 83, 118, 68, 138]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 4 de 5,runs: [[33, 11, 20, 10, 39, 40, 36], [27, 30, 53, 21, 10, 138, 67, 31, 96, 145, 87, 66, 27, 104, 45, 16, 65, 129, 114, 51, 152, 75, 58, 105, 127]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 5 de 5,runs: [[49, 43, 13, 1, 12, 10, 1], [68, 43, 9, 151, 89, 87, 20, 127, 27, 1, 67, 70, 106, 15, 75, 151, 68, 93, 112, 136, 150, 150, 124, 129, 142]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Con arquitectura: [[16, 32], [32, 64], [64, 32, 16]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Boostrap 1 de 5,runs: [[23, 37, 39, 33, 36, 29, 34], [127, 104, 24, 84, 73, 154, 138, 92, 74, 4, 117, 91, 75, 100, 25, 42, 95, 39, 109, 10, 130, 118, 87, 40, 156]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 2 de 5,runs: [[12, 1, 15, 24, 6, 35, 20], [47, 123, 105, 8, 8, 155, 122, 144, 152, 159, 53, 152, 11, 90, 43, 80, 87, 39, 150, 80, 44, 154, 128, 70, 148]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 3 de 5,runs: [[1, 7, 10, 42, 23, 44, 35], [81, 22, 109, 15, 69, 160, 55, 130, 159, 160, 103, 39, 152, 3, 139, 154, 27, 129, 159, 63, 84, 110, 150, 145, 20]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 4 de 5,runs: [[15, 20, 17, 36, 45, 1, 11], [8, 94, 151, 60, 91, 127, 9, 3, 73, 75, 104, 84, 117, 94, 27, 11, 67, 45, 99, 153, 123, 40, 40, 66, 45]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
+Boostrap 5 de 5,runs: [[18, 14, 41, 10, 36, 40, 48], [109, 105, 136, 103, 73, 143, 62, 60, 20, 154, 93, 40, 70, 138, 77, 96, 126, 22, 28, 65, 145, 75, 25, 18, 123]], y uso de CPU  ?? Mb, y memoria 0 Mb 
+Al borrar memoria nos quedan 0 Mb 
