@@ -1,4 +1,5 @@
 datos
 modelos/old
 modelos/performances/old
+src/CTA-data-analisis-library
 automat/scripts/slurm*
