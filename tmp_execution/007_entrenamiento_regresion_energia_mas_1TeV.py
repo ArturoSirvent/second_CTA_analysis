@@ -6,7 +6,8 @@
 #importamos librerias
 
 import sys
-sys.path.append('../src/CTA-data-analisis-library/')
+sys.path.append('/home/asirvent/second_CTA_analysis/src/CTA-data-analisis-library/')
+
 import os 
 import subprocess
 from datetime import datetime
@@ -27,13 +28,12 @@ import unzipdata_and_first_treatments as manipulate
 import loaddata4use
 import model_creation_functions as models
 
-# %%
-tf.config.threading.set_inter_op_parallelism_threads(4)
 
 # %%
 #enviroment variables
-npy_final_dir="../datos/elementos_npy"
-base_dir_elementos="../datos/elementos"
+base_dir="/home/asirvent/second_CTA_analysis"
+npy_final_dir=f"{base_dir}/datos/elementos_npy"
+base_dir_elementos=f"{base_dir}/datos/elementos"
 elements=['gamma', 'electron']
 
 # %%
@@ -94,32 +94,32 @@ opciones_filtros_last=[
 
 device = cuda.get_current_device()
 file_number="007"
-n=17 #repes de boostrap
+n=10 #repes de boostrap
 #primer bucle para arquitecturas
 for i,arch in enumerate(opciones_filtros):
     print(f"{i}: {arch} \n")
 
     modelo=models.model_multi_tel_energy(len_inputs=4,input_shapes=[(55,93,1)],filtros=arch,last_dense=opciones_filtros_last[i]) #no compila
     modelo.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3),loss="mse",metrics=["mae","mape"])
-    with open(f"../automat/logs/{file_number}_data_control_energy.txt","a") as registro:
-        registro.write(f"Con arquitectura: {arch}, y uso de CPU por el modelo {tf.config.experimental.get_memory_info('CPU:0')['current']>>20}Mb, y memoria {get_all_size(list(locals().items()))} Mb \n")
+    with open(f"{base_dir}/automat/logs/{file_number}_data_control_energy.txt","a") as registro:
+        registro.write(f"Con arquitectura: {arch}, memoria {get_all_size(list(locals().items()))} Mb \n")
 
     #segundo_bucle para boostrap
     for k in range(n):
         #modificamos el learning rate
         if k == 4:
             modelo.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-4),loss="mse",metrics=["mae","mape"])
-        elif k == 10:
+        elif k == 6:
             modelo.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-5),loss="mse",metrics=["mae","mape"])
-        elif k == 15:
+        elif k == 8:
             modelo.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-6),loss="mse",metrics=["mae","mape"])
 
 
-        print(f"\n Boostrap {k+1} de {n}, y uso de CPU por el modelo {tf.config.experimental.get_memory_info('CPU:0')['current']>>20}Mb, y memoria {get_all_size(list(locals().items()))} Mb \n")
+        print(f"\n Boostrap {k+1} de {n}, memoria {get_all_size(list(locals().items()))} Mb \n")
 
         list_runs=new_create_main_list_runs([15,60],chose_runs)#new_create_main_list_runs([2,6,6,6,6,6,6],chose_runs)
-        with open(f"../automat/logs/{file_number}_data_control_energy.txt","a") as registro:
-            registro.write(f"Boostrap {k+1} de {n},runs: {list_runs}, y uso de CPU por el modelo {tf.config.experimental.get_memory_info('CPU:0')['current']>>20}Mb, y memoria {get_all_size(list(locals().items()))} Mb \n")
+        with open(f"{base_dir}/automat/logs/{file_number}_data_control_energy.txt","a") as registro:
+            registro.write(f"Boostrap {k+1} de {n},runs: {list_runs}, memoria {get_all_size(list(locals().items()))} Mb \n")
         x_train_list,x_test_list,y_train_list,y_test_list=loaddata4use.load_dataset_energy(npy_final_dir,base_dir_elementos,elementos=['gamma', 'electron'],main_list_runs=list_runs,telescopios=[1,2,3,4],test_size=0.01,
             same_quant="same",verbose=True,fill=True,lower_energy_bound=1,upper_energy_bound=10)
         print(f"\n Despues de cargar las variables, en memoria {get_all_size(list(locals().items()))} Mb \n")
@@ -128,14 +128,14 @@ for i,arch in enumerate(opciones_filtros):
         x_test_list=cambiar_ejes_lista(x_test_list)
 
         
-        hist=modelo.fit(x=x_train_list,y=y_train_list,epochs=7, validation_data=(x_test_list,y_test_list),batch_size=32)
+        hist=modelo.fit(x=x_train_list,y=y_train_list,epochs=40, validation_data=(x_test_list,y_test_list),batch_size=32)
         del x_train_list,x_test_list,y_train_list,y_test_list
         gc.collect()
-        with open(f"../automat/logs/{file_number}_data_control_energy.txt","a") as registro:
+        with open(f"{base_dir}/automat/logs/{file_number}_data_control_energy.txt","a") as registro:
             registro.write(f"Al borrar memoria nos quedan {get_all_size(list(locals().items()))} Mb \n")
         print(f"\n Al borrar memoria nos quedan {get_all_size(list(locals().items()))} Mb \n")
-        modelo.save(f"../modelos/{file_number}_modelo_filtro_{i}_en_boostrap_stage_{k+1}_energy.h5")
-        with open(f"../modelos/performances/{file_number}_history_modelo_filtro_{i}_en_boostrap_stage_{k+1}_energy.pickle","wb") as pick:
+        modelo.save(f"{base_dir}/modelos/{file_number}_modelo_filtro_{i}_en_boostrap_stage_{k+1}_energy.h5")
+        with open(f"{base_dir}/modelos/performances/{file_number}_history_modelo_filtro_{i}_en_boostrap_stage_{k+1}_energy.pickle","wb") as pick:
             pickle.dump(hist.history,pick)    
     del modelo 
     gc.collect()
