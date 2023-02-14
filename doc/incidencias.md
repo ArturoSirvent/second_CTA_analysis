@@ -11,3 +11,8 @@
 * La informacion sobre uso de memoria en cpu que estamos displayeando con lo de tf solo refiere (creo) a uso del modelo, aunque no tiene mucho sentido algunas lecturas de la informacion que ocupa, siendo en los primeros boostraps mucho y luego menos.
 
 * A pasado algo raro, en el tercer filtro propuesto para la energia, se ha parado en la primera epoca del primer boostrap, probablemente ha colapsado el proceso por uso de memoria, pero no se como comprobarlo. Es verdad que la red esa era la más grande de las tres, alomejor demasiados parámetros.
+
+
+## He hecho unos modelos
+
+Y bien, pero para el caso de la regresión de la energía falla mucho para mas de 1 TeV, entonces voy a hacer un modelo que solo experimente con valores mayores que 1TeV.
