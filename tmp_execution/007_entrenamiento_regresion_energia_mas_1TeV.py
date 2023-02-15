@@ -77,12 +77,11 @@ chose_runs[0].remove(3)
 
 # %%
 opciones_filtros=[
-    [[16,32],[64,128],[128,64],[64,32]],
     [[32,64],[64,128],[128,64,32]],
     [[16,32],[32,64],[64,32,16]]]
 
 opciones_filtros_last=[
-    [20,10],[40,5],[10,5]
+    [40,5],[10,5]
 ]
 
 # %%
@@ -97,8 +96,7 @@ file_number="007"
 n=10 #repes de boostrap
 #primer bucle para arquitecturas
 for i,arch in enumerate(opciones_filtros):
-    print(f"{i}: {arch} \n")
-
+    print(f"{i+1}: {arch} \n")
     modelo=models.model_multi_tel_energy(len_inputs=4,input_shapes=[(55,93,1)],filtros=arch,last_dense=opciones_filtros_last[i]) #no compila
     modelo.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3),loss="mse",metrics=["mae","mape"])
     with open(f"{base_dir}/automat/logs/{file_number}_data_control_energy.txt","a") as registro:
@@ -130,23 +128,17 @@ for i,arch in enumerate(opciones_filtros):
         
         hist=modelo.fit(x=x_train_list,y=y_train_list,epochs=40, validation_data=(x_test_list,y_test_list),batch_size=32)
         del x_train_list,x_test_list,y_train_list,y_test_list
-        gc.collect()
         with open(f"{base_dir}/automat/logs/{file_number}_data_control_energy.txt","a") as registro:
             registro.write(f"Al borrar memoria nos quedan {get_all_size(list(locals().items()))} Mb \n")
         print(f"\n Al borrar memoria nos quedan {get_all_size(list(locals().items()))} Mb \n")
-        modelo.save(f"{base_dir}/modelos/{file_number}_modelo_filtro_{i}_en_boostrap_stage_{k+1}_energy.h5")
-        with open(f"{base_dir}/modelos/performances/{file_number}_history_modelo_filtro_{i}_en_boostrap_stage_{k+1}_energy.pickle","wb") as pick:
+        modelo.save(f"{base_dir}/modelos/{file_number}_modelo_filtro_{i+1}_en_boostrap_stage_{k+1}_energy.h5")
+        with open(f"{base_dir}/modelos/performances/{file_number}_history_modelo_filtro_{i+1}_en_boostrap_stage_{k+1}_energy.pickle","wb") as pick:
             pickle.dump(hist.history,pick)    
+        gc.collect()
     del modelo 
     gc.collect()
-    tf.keras.backend.clear_session()
-    device.reset()
-
-        
 
 
-# %%
-hist.history()
 
 # %%
 
