@@ -31,3 +31,5 @@ Boostrap 4 de 5,runs: [[15, 20, 17, 36, 45, 1, 11], [8, 94, 151, 60, 91, 127, 9,
 Al borrar memoria nos quedan 0 Mb 
 Boostrap 5 de 5,runs: [[18, 14, 41, 10, 36, 40, 48], [109, 105, 136, 103, 73, 143, 62, 60, 20, 154, 93, 40, 70, 138, 77, 96, 126, 22, 28, 65, 145, 75, 25, 18, 123]], y uso de CPU  ?? Mb, y memoria 0 Mb 
 Al borrar memoria nos quedan 0 Mb 
+Con arquitectura: [[16, 32], [64, 128], [128, 64], [64, 32]], y uso de CPU 1Mb, y memoria 0 Mb 
+Boostrap 1 de 5,runs: [[35, 24, 12, 15], [152, 51, 152, 45, 70, 122, 12, 23, 89, 43, 114, 156, 9, 61, 108, 124, 68, 149, 30, 124]], y uso de CPU 1Mb, y memoria 0 Mb 
