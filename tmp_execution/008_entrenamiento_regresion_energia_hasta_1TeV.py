@@ -105,7 +105,7 @@ for i,arch in enumerate(opciones_filtros):
     modelo=models.model_multi_tel_energy(len_inputs=4,input_shapes=[(55,93,1)],filtros=arch,last_dense=opciones_filtros_last[i]) #no compila
     modelo.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3),loss="mse",metrics=["mae","mape"])
     with open(f"{base_dir}/automat/logs/{file_number}_data_control_energy.txt","a") as registro:
-        registro.write(f"Con arquitectura: {arch} + {opciones_filtros_last[i]}") #, memoria {get_all_size(list(locals().items()))} Mb \n")
+        registro.write(f"Con arquitectura: {arch} + {opciones_filtros_last[i]} \n") #, memoria {get_all_size(list(locals().items()))} Mb \n")
 
     #segundo_bucle para boostrap
     for k in range(n):
@@ -122,7 +122,7 @@ for i,arch in enumerate(opciones_filtros):
 
         list_runs=new_create_main_list_runs([15,60],chose_runs)#new_create_main_list_runs([2,6,6,6,6,6,6],chose_runs)
         with open(f"{base_dir}/automat/logs/{file_number}_data_control_energy.txt","a") as registro:
-            registro.write(f"Boostrap {k+1} de {n},runs: {list_runs}")#, memoria {get_all_size(list(locals().items()))} Mb \n")
+            registro.write(f"Boostrap {k+1} de {n},runs: {list_runs} \n")#, memoria {get_all_size(list(locals().items()))} Mb \n")
         x_train_list,x_test_list,y_train_list,y_test_list=loaddata4use.load_dataset_energy(npy_final_dir,base_dir_elementos,elementos=['gamma', 'electron'],main_list_runs=list_runs,telescopios=[1,2,3,4],test_size=0.1,
             same_quant="same",verbose=True,fill=True,lower_energy_bound=0,upper_energy_bound=1)
         print(f"\n Variables cargadas")#, en memoria {get_all_size(list(locals().items()))} Mb \n")
