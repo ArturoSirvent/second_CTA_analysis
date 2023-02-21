@@ -9,7 +9,8 @@ import pickle
 #importamos librerias
 import os 
 import sys
-sys.path.append(os.path.join(os.path.abspath(".."),"src/CTA-data-analisis-library"))
+sys.path.append('/home/asirvent/second_CTA_analysis/src/CTA-data-analisis-library/')
+
 import subprocess
 
 from datetime import datetime
@@ -33,17 +34,17 @@ import loaddata4use
 import model_creation_functions as models
 
 # %%
-BASE_DIR=os.path.abspath("..")
+BASE_DIR="/home/asirvent/second_CTA_analysis"
 
 # %%
-plt.figure(figsize=(12,10))
+fig0=plt.figure(figsize=(12,10))
 
 for j in [0,1,2]:
     plt.subplot(3,1,j+1)
     aux1=[]
     aux3=[]
     for i in range(1,19):
-        with open(f"../modelos/performances/009_history_modelo_filtro_{j}_en_boostrap_stage_{i}_energy.pickle","rb") as fil:
+        with open(f"{BASE_DIR}/modelos/performances/009_history_modelo_filtro_{j}_en_boostrap_stage_{i}_energy.pickle","rb") as fil:
             hist=pickle.load(fil)
             aux1.append(hist["loss"])
             aux3.append(hist["val_loss"])
@@ -58,7 +59,8 @@ for j in [0,1,2]:
     plt.grid()
 
 plt.savefig(f"{BASE_DIR}/results/009_energy_training_losses.png")
-
+plt.clf()
+plt.close(fig0)
 # %% [markdown]
 # ## Carga de datos de test
 
@@ -88,8 +90,8 @@ def cambiar_ejes_lista(lista):
 
 # %%
 #enviroment variables
-npy_final_dir="../datos/elementos_npy_test"
-base_dir_elementos="../datos/elementos"
+npy_final_dir=f"{BASE_DIR}/datos/elementos_npy_test"
+base_dir_elementos=f"{BASE_DIR}/datos/elementos"
 elements=['gamma', 'electron']
 
 # %%
@@ -112,13 +114,13 @@ x_train_list=cambiar_ejes_lista(x_train_list)
 
 # %%
 #cargamos el ultimo modelo de los dos filtros:
-modelos=[tf.keras.models.load_model(name) for name in glob("../modelos/009_modelo_filtro_*_en_boostrap_stage_18_energy.h5")]
+modelos=[tf.keras.models.load_model(name) for name in glob(f"{BASE_DIR}/modelos/009_modelo_filtro_*_en_boostrap_stage_18_energy.h5")]
 
 
 # %%
 y_pred_all=[]
 total_len=x_train_list[1].shape[0]
-n=350
+n=450
 cicles=int(np.ceil(total_len/n))
 for i in range(cicles):
     print("Ciclo",i)
@@ -137,8 +139,6 @@ for i in range(cicles):
             y_pred_all[j]=np.concatenate([y_pred_all[j],y_pred[j]],axis=0)
 
 
-# %%
-#print( len(y_pred_all), y_pred_all[1].shape)
 
 # %%
 # Polynomial Regression
@@ -198,9 +198,9 @@ for i,y in enumerate(y_pred_all):
     plt.xlabel("y_true (TeV)")
     plt.ylabel("y_pred (TeV)")
     plt.legend()
-    plt.title(f"Arquitectura {i}; \n R2={results['determination']:.2f}, RMSE={rmse:.3f} \n R2_electron={results_electron['determination']:.2f}, RMSE_electron={rmse_electron:.3f} \ \n R2_gamma={results_gamma['determination']:.2f}, RMSE_gamma={rmse_gamma:.3f}")
+    plt.title(f"Arquitectura {i}; \n R2={results['determination']:.2f}, RMSE={rmse:.3f} \n R2_electron={results_electron['determination']:.2f}, RMSE_electron={rmse_electron:.3f} \n R2_gamma={results_gamma['determination']:.2f}, RMSE_gamma={rmse_gamma:.3f}")
     plt.tight_layout()
-    plt.savefig(f"../results/009_correlation_energy_filter_{i}.png")
+    plt.savefig(f"{BASE_DIR}/results/009_correlation_energy_filter_{i}.png")
     plt.clf()
     plt.close(fig)
     #plot de la distribucion de errores
@@ -213,7 +213,8 @@ for i,y in enumerate(y_pred_all):
     plt.hist(res_gamma,bins=70,label="Residuos gamma",density=True,color="purple",alpha=0.3)
     plt.legend()
     plt.title(f"Arquitectura {i}")# ; std: {np.std(y_train_list-y)}")
-    plt.savefig(f"../results/009_resid_hist_energy_filter_{i}.png")
+    plt.tight_layout()
+    plt.savefig(f"{BASE_DIR}/results/009_resid_hist_energy_filter_{i}.png")
     plt.clf()
     plt.close(fig2)
 

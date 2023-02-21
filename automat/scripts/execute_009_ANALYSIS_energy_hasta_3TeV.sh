@@ -2,7 +2,7 @@
 
 
 #SBATCH --job-name=my_job_arturo_3TeV
-#SBATCH --time=0
+#SBATCH --time=11:00:00
 #SBATCH --mem=30GB
 #SBATCH --partition guest
 #SBATCH --output="execute_009_ANALYSIS_energy_hasta_3TeV.out"
