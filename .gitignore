@@ -3,3 +3,5 @@ modelos/old
 modelos/performances/old
 src/CTA-data-analisis-library
 *.out
+data_full
+data_2
