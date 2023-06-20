@@ -148,13 +148,16 @@ PATH_npy=f"{BASE_DIR}/data_full/combined/elementos_npy"
 #aux_list=[i[:2] for i in train_runs_list]
 
 # %%
+print("Antes de cargar")
 x_train_list,x_test_list,y_train_list,y_test_list=loaddata4use.load_dataset_completo(PATH_npy,labels_asign=[0,1,2,2,2,2,2],elements=elementos,
                                                                                     main_list_runs=train_runs_list,pre_name_folders="npy_",telescopes=[1,2,3,4],
                                                                                     test_size=0.01,same_quant="approx",verbose=True,fill=True,categorical=True)
+print("Después de cargar")
 
-
-print([i.shape for i in x_train_list],[ i.shape for i in x_test_list],y_train_list.shape,y_test_list.shape)
-
+try:
+    print([i.shape for i in x_train_list],[ i.shape for i in x_test_list],y_train_list.shape,y_test_list.shape)
+except:
+    print("error con el prinde las shapes")
 # %%
 # print(tf.test.gpu_device_name())
 # print(tf.config.list_physical_devices('GPU') )
@@ -172,15 +175,17 @@ x_train_list=cambiar_ejes_lista(x_train_list)
 x_test_list=cambiar_ejes_lista(x_test_list)
 
 
-with tf.device("CPU"):
+with tf.device("CPU:0"):
     x_train_tensor_list=[tf.convert_to_tensor(i) for i in x_train_list]
     x_test_tensor_list=[tf.convert_to_tensor(i) for i in x_test_list]
     y_train_tensor=tf.convert_to_tensor(y_train_list)
     y_test_tensor=tf.convert_to_tensor(y_test_list)
 
+print("Creando modelo")
 # %%
 modelo=models.model_multi_tel(classes=3,filtros=[[32,64],[64,128],[128,64],[32,16]],len_inputs=4,last_dense=[20,5])
 modelo.compile(optimizer="adam",loss="categorical_crossentropy",metrics=["acc","AUC","mean_squared_error"])
+print("Modelo creado")
 
 # %%
 from numba import cuda
@@ -206,8 +211,13 @@ class Print_gpu_usage(tf.keras.callbacks.Callback):
 #con mas datos cargados en memoria
 
 #con mas datos cargados en memoria
+print("Comienza entrenamiento")
+
 hist=modelo.fit(x=x_train_tensor_list,y=y_train_tensor,epochs=30, validation_data=(x_test_tensor_list,y_test_tensor),batch_size=128)#,callbacks=[Print_gpu_usage()])     
+
+print("Entrenado el modelo")
 
 modelo.save(f"test.h5")
 with open(f"hist.pickle","wb") as pick:
     pickle.dump(hist.history,pick)
+print("FIN")
