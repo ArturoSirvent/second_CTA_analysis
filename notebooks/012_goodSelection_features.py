@@ -13,6 +13,7 @@ import glob
 import tensorflow as tf 
 import seaborn as sns
 import pandas as pd
+import gc
 
 #propias
 import unzipdata_and_first_treatments as manipulate
@@ -145,15 +146,15 @@ test_runs_list=list(test_runs["list_runs"].to_numpy())
 # %%
 PATH_npy=f"{BASE_DIR}/data_full/combined/elementos_npy"
 # %%
-#aux_list=[i[:2] for i in train_runs_list]
+aux_list=[i[-70:] for i in train_runs_list]
 
 # %%
 print("Antes de cargar")
 x_train_list,x_test_list,y_train_list,y_test_list=loaddata4use.load_dataset_completo(PATH_npy,labels_asign=[0,1,2,2,2,2,2],elements=elementos,
-                                                                                    main_list_runs=train_runs_list,pre_name_folders="npy_",telescopes=[1,2,3,4],
+                                                                                    main_list_runs=aux_list,pre_name_folders="npy_",telescopes=[1,2,3,4],
                                                                                     test_size=0.01,same_quant="approx",verbose=True,fill=True,categorical=True)
 print("Después de cargar")
-
+gc.collect()
 try:
     print([i.shape for i in x_train_list],[ i.shape for i in x_test_list],y_train_list.shape,y_test_list.shape)
 except:
@@ -171,15 +172,31 @@ def cambiar_ejes_lista(lista):
     return lista
 
 # %%
+print("Cambio de ejes")
+
 x_train_list=cambiar_ejes_lista(x_train_list)
 x_test_list=cambiar_ejes_lista(x_test_list)
+print("Ejes cambiados")
 
 
 with tf.device("CPU:0"):
-    x_train_tensor_list=[tf.convert_to_tensor(i) for i in x_train_list]
-    x_test_tensor_list=[tf.convert_to_tensor(i) for i in x_test_list]
-    y_train_tensor=tf.convert_to_tensor(y_train_list)
-    y_test_tensor=tf.convert_to_tensor(y_test_list)
+    print("Convertir a tensores")
+    x_train_tensor_list=[tf.cast(tf.convert_to_tensor(i), tf.float32) for i in x_train_list]
+    print("1")
+    del x_train_list
+    gc.collect()
+    x_test_tensor_list=[tf.cast(tf.convert_to_tensor(i), tf.float32) for i in x_test_list]
+    del x_test_list
+    gc.collect()
+    print("2")
+    y_train_tensor=tf.cast(tf.convert_to_tensor(y_train_list),tf.float32)
+    del y_train_list
+    gc.collect()
+    y_test_tensor=tf.cast(tf.convert_to_tensor(y_test_list),tf.float32)
+    del y_test_list 
+    gc.collect()
+print("Convertidos a ")
+gc.collect()
 
 print("Creando modelo")
 # %%
