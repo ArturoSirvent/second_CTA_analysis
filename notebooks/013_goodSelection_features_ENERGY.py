@@ -153,10 +153,10 @@ x_train_list,x_test_list,y_train_list,y_test_list=loaddata4use.load_dataset_ener
 
 print("Después de cargar")
 gc.collect()
-try:
-    print([i.shape for i in x_train_list],[ i.shape for i in x_test_list],y_train_list.shape,y_test_list.shape)
-except:
-    print("error con el prinde las shapes")
+# try:
+#     print([i.shape for i in x_train_list],[ i.shape for i in x_test_list],y_train_list.shape,y_test_list.shape)
+# except:
+#     print("error con el prinde las shapes")
 # %%
 # print(tf.test.gpu_device_name())
 # print(tf.config.list_physical_devices('GPU') )
@@ -179,11 +179,11 @@ print("Ejes cambiados")
 
 with tf.device("CPU:0"):
     print("Convertir a tensores")
-    x_train_tensor_list=[tf.cast(tf.convert_to_tensor(i), tf.float32) for i in x_train_list]
+    x_train_tensor_list=tf.cast(tf.convert_to_tensor(x_train_list), tf.float32)#[ for i in x_train_list]
     print("1")
     del x_train_list
     gc.collect()
-    x_test_tensor_list=[tf.cast(tf.convert_to_tensor(i), tf.float32) for i in x_test_list]
+    x_test_tensor_list=tf.cast(tf.convert_to_tensor(x_test_list), tf.float32)#[ for i in x_test_list]
     del x_test_list
     gc.collect()
     print("2")
@@ -202,8 +202,6 @@ arch=[[32,64],[64,128],[128,64],[32,16]]
 modelo=models.model_multi_tel_energy(len_inputs=4,input_shapes=[(55,93,1)],filtros=arch,last_dense=[20,5]) #no compila
 modelo.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-4),loss="mse",metrics=["mae","mape"])
 print("Modelo creado")
-
-# %%
 
 
 # %%

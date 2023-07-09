@@ -129,7 +129,7 @@ eventos_number_rand["mode"]=eventos_number_rand["mode"].fillna("Test")
 # %%
 df_lista_runs=eventos_number_rand.groupby(["elemento","mode"]).apply(lambda x : list(x["run"])).to_frame(name="list_runs").reset_index()
 
-df_lista_runs.to_csv("runs_train_test_3.csv")
+df_lista_runs.to_csv("./results_UGR/runs_train_test_5_400_4tel_7labels.csv")
 
 # %%
 elementos=['gamma', 'electron', 'proton', 'helium', 'nitrogen', 'silicon', 'iron']
@@ -146,19 +146,19 @@ test_runs_list=list(test_runs["list_runs"].to_numpy())
 # %%
 PATH_npy=f"{BASE_DIR}/data_full/elementos_npy"
 # %%
-aux_list=[i[-200:] for i in train_runs_list]
+aux_list=[i[-400:] for i in train_runs_list]
 
 # %%
 print("Antes de cargar")
-x_train_list,x_test_list,y_train_list,y_test_list=loaddata4use.load_dataset_completo(PATH_npy,labels_asign=[0,1,2,2,2,2,2],elements=elementos,
-                                                                                    main_list_runs=aux_list,pre_name_folders="npy_",telescopes=[1,2,3,4],
+x_train_list,x_test_list,y_train_list,y_test_list=loaddata4use.load_dataset_completo(PATH_npy,labels_asign=[0,1,2,3,4,5,6],elements=elementos,
+                                                                                    main_list_runs=aux_list,pre_name_folders="npy_",telescopes=[1],
                                                                                     test_size=0.01,same_quant="approx",verbose=True,fill=True,categorical=True)
 print("Después de cargar")
 gc.collect()
-try:
-    print([i.shape for i in x_train_list],[ i.shape for i in x_test_list],y_train_list.shape,y_test_list.shape)
-except:
-    print("error con el prinde las shapes")
+# try:
+#     print([i.shape for i in x_train_list],[ i.shape for i in x_test_list],y_train_list.shape,y_test_list.shape)
+# except:
+#     print("error con el prinde las shapes")
 # %%
 # print(tf.test.gpu_device_name())
 # print(tf.config.list_physical_devices('GPU') )
@@ -174,18 +174,18 @@ def cambiar_ejes_lista(lista):
 # %%
 print("Cambio de ejes")
 
-x_train_list=cambiar_ejes_lista(x_train_list)
-x_test_list=cambiar_ejes_lista(x_test_list)
+x_train_list=np.swapaxes(x_train_list,1,2)#cambiar_ejes_lista(x_train_list)
+x_test_list=np.swapaxes(x_test_list,1,2)#cambiar_ejes_lista(x_test_list)x_train_list
 print("Ejes cambiados")
 
 
 with tf.device("CPU:0"):
     print("Convertir a tensores")
-    x_train_tensor_list=[tf.cast(tf.convert_to_tensor(i), tf.float32) for i in x_train_list]
+    x_train_tensor_list=tf.cast(tf.convert_to_tensor(x_train_list), tf.float32)#[ for i in x_train_list]
     print("1")
     del x_train_list
     gc.collect()
-    x_test_tensor_list=[tf.cast(tf.convert_to_tensor(i), tf.float32) for i in x_test_list]
+    x_test_tensor_list=tf.cast(tf.convert_to_tensor(x_test_list), tf.float32)#[ for i in x_test_list]
     del x_test_list
     gc.collect()
     print("2")
@@ -200,7 +200,7 @@ gc.collect()
 
 print("Creando modelo")
 # %%
-modelo=models.model_multi_tel(classes=3,filtros=[[32,64],[64,128],[128,64],[32,16]],len_inputs=4,last_dense=[20,5])
+modelo=models.model_multi_tel(classes=7,filtros=[[32,64],[64,128],[128,64],[32,16]],len_inputs=1,last_dense=[20,5])
 modelo.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-4),loss="categorical_crossentropy",metrics=["acc","AUC","mean_squared_error"])
 print("Modelo creado")
 
@@ -227,11 +227,11 @@ class Print_gpu_usage(tf.keras.callbacks.Callback):
 #con mas datos cargados en memoria
 print("Comienza entrenamiento")
 
-hist=modelo.fit(x=x_train_tensor_list,y=y_train_tensor,epochs=40, validation_data=(x_test_tensor_list,y_test_tensor),batch_size=256)#,callbacks=[Print_gpu_usage()])     
+hist=modelo.fit(x=x_train_tensor_list,y=y_train_tensor,epochs=40, validation_data=(x_test_tensor_list,y_test_tensor),batch_size=64)#,callbacks=[Print_gpu_usage()])     
 
 print("Entrenado el modelo")
 
-modelo.save(f"test_3.h5")
-with open(f"hist_3.pickle","wb") as pick:
+modelo.save(f"./results_UGR/test_5_400_4tel_7labels.h5")
+with open(f"./results_UGR/hist_5_400_4tel_7labels.pickle","wb") as pick:
     pickle.dump(hist.history,pick)
 print("FIN")
