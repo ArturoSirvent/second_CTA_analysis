@@ -174,8 +174,8 @@ def cambiar_ejes_lista(lista):
 # %%
 print("Cambio de ejes")
 
-x_train_list=cambiar_ejes_lista(x_train_list)
-x_test_list=cambiar_ejes_lista(x_test_list)
+x_train_list=np.swapaxes(x_train_list,1,2)#cambiar_ejes_lista(x_train_list)
+x_test_list=np.swapaxes(x_test_list,1,2)#cambiar_ejes_lista(x_test_list)
 print("Ejes cambiados")
 
 
