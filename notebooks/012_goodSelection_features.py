@@ -129,7 +129,7 @@ eventos_number_rand["mode"]=eventos_number_rand["mode"].fillna("Test")
 # %%
 df_lista_runs=eventos_number_rand.groupby(["elemento","mode"]).apply(lambda x : list(x["run"])).to_frame(name="list_runs").reset_index()
 
-df_lista_runs.to_csv("runs_train_test.csv")
+df_lista_runs.to_csv("runs_train_test_4.csv")
 
 # %%
 elementos=['gamma', 'electron', 'proton', 'helium', 'nitrogen', 'silicon', 'iron']
@@ -146,7 +146,7 @@ test_runs_list=list(test_runs["list_runs"].to_numpy())
 # %%
 PATH_npy=f"{BASE_DIR}/data_full/combined/elementos_npy"
 # %%
-aux_list=[i[-70:] for i in train_runs_list]
+aux_list=[i[-200:] for i in train_runs_list]
 
 # %%
 print("Antes de cargar")
@@ -201,14 +201,12 @@ gc.collect()
 print("Creando modelo")
 # %%
 modelo=models.model_multi_tel(classes=3,filtros=[[32,64],[64,128],[128,64],[32,16]],len_inputs=4,last_dense=[20,5])
-modelo.compile(optimizer="adam",loss="categorical_crossentropy",metrics=["acc","AUC","mean_squared_error"])
+modelo.compile(optimizer=tf.keras.optimizers.Adam(lr=1e-4),loss="categorical_crossentropy",metrics=["acc","AUC","mean_squared_error"])
 print("Modelo creado")
 
 # %%
-from numba import cuda
 import gc
 import pickle
-device = cuda.get_current_device()
 
 
 # %%
@@ -230,11 +228,11 @@ class Print_gpu_usage(tf.keras.callbacks.Callback):
 #con mas datos cargados en memoria
 print("Comienza entrenamiento")
 
-hist=modelo.fit(x=x_train_tensor_list,y=y_train_tensor,epochs=30, validation_data=(x_test_tensor_list,y_test_tensor),batch_size=128)#,callbacks=[Print_gpu_usage()])     
+hist=modelo.fit(x=x_train_tensor_list,y=y_train_tensor,epochs=60, validation_data=(x_test_tensor_list,y_test_tensor),batch_size=128)#,callbacks=[Print_gpu_usage()])     
 
 print("Entrenado el modelo")
 
-modelo.save(f"test.h5")
-with open(f"hist.pickle","wb") as pick:
+modelo.save(f"test_4.h5")
+with open(f"hist_4.pickle","wb") as pick:
     pickle.dump(hist.history,pick)
 print("FIN")
