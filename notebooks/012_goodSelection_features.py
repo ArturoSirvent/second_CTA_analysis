@@ -3,7 +3,7 @@
 
 # %%
 import sys 
-BASE_DIR="/home/arturosf/Documentos/repos/second_CTA_analysis"
+BASE_DIR="/home/asirvent/second_CTA_analysis"
 sys.path.append(f"{BASE_DIR}/src/CTA-data-analisis-library/")
 import numpy as np 
 import matplotlib.pyplot as plt
@@ -21,7 +21,7 @@ import loaddata4use
 import model_creation_functions as models
 
 # %%
-PATH_TXT=f"{BASE_DIR}/data_full/combined/SimTelArray_2022_05"
+PATH_TXT=f"/home/asirvent/SimTelArray_2022_05"
 
 
 
@@ -129,7 +129,11 @@ eventos_number_rand["mode"]=eventos_number_rand["mode"].fillna("Test")
 # %%
 df_lista_runs=eventos_number_rand.groupby(["elemento","mode"]).apply(lambda x : list(x["run"])).to_frame(name="list_runs").reset_index()
 
+<<<<<<< HEAD
 df_lista_runs.to_csv("runs_train_test_4.csv")
+=======
+df_lista_runs.to_csv("./results_UGR/runs_train_test_7_400_1tel_7labels.csv")
+>>>>>>> 23c185563d572ab3cf3bac0e18f5433fccd4f754
 
 # %%
 elementos=['gamma', 'electron', 'proton', 'helium', 'nitrogen', 'silicon', 'iron']
@@ -144,21 +148,25 @@ test_runs=test_runs.loc[elementos].reset_index()
 test_runs_list=list(test_runs["list_runs"].to_numpy())
 
 # %%
-PATH_npy=f"{BASE_DIR}/data_full/combined/elementos_npy"
+PATH_npy=f"{BASE_DIR}/data_full/elementos_npy"
 # %%
+<<<<<<< HEAD
 aux_list=[i[-200:] for i in train_runs_list]
+=======
+aux_list=[i[-400:] for i in train_runs_list]
+>>>>>>> 23c185563d572ab3cf3bac0e18f5433fccd4f754
 
 # %%
 print("Antes de cargar")
-x_train_list,x_test_list,y_train_list,y_test_list=loaddata4use.load_dataset_completo(PATH_npy,labels_asign=[0,1,2,2,2,2,2],elements=elementos,
-                                                                                    main_list_runs=aux_list,pre_name_folders="npy_",telescopes=[1,2,3,4],
+x_train_list,x_test_list,y_train_list,y_test_list=loaddata4use.load_dataset_completo(PATH_npy,labels_asign=[0,1,2,3,4,5,6],elements=elementos,
+                                                                                    main_list_runs=aux_list,pre_name_folders="npy_",telescopes=[1],
                                                                                     test_size=0.01,same_quant="approx",verbose=True,fill=True,categorical=True)
 print("Después de cargar")
 gc.collect()
-try:
-    print([i.shape for i in x_train_list],[ i.shape for i in x_test_list],y_train_list.shape,y_test_list.shape)
-except:
-    print("error con el prinde las shapes")
+# try:
+#     print([i.shape for i in x_train_list],[ i.shape for i in x_test_list],y_train_list.shape,y_test_list.shape)
+# except:
+#     print("error con el prinde las shapes")
 # %%
 # print(tf.test.gpu_device_name())
 # print(tf.config.list_physical_devices('GPU') )
@@ -174,18 +182,18 @@ def cambiar_ejes_lista(lista):
 # %%
 print("Cambio de ejes")
 
-x_train_list=cambiar_ejes_lista(x_train_list)
-x_test_list=cambiar_ejes_lista(x_test_list)
+x_train_list=np.swapaxes(x_train_list,1,2)#cambiar_ejes_lista(x_train_list)
+x_test_list=np.swapaxes(x_test_list,1,2)#cambiar_ejes_lista(x_test_list)
 print("Ejes cambiados")
 
 
 with tf.device("CPU:0"):
     print("Convertir a tensores")
-    x_train_tensor_list=[tf.cast(tf.convert_to_tensor(i), tf.float32) for i in x_train_list]
+    x_train_tensor_list=tf.cast(tf.convert_to_tensor(x_train_list))#[tf.cast(tf.convert_to_tensor(i), tf.float32) for i in x_train_list]
     print("1")
     del x_train_list
     gc.collect()
-    x_test_tensor_list=[tf.cast(tf.convert_to_tensor(i), tf.float32) for i in x_test_list]
+    x_test_tensor_list=tf.cast(tf.convert_to_tensor(x_test_list), tf.float32)#[tf.cast(tf.convert_to_tensor(i), tf.float32) for i in x_test_list]
     del x_test_list
     gc.collect()
     print("2")
@@ -200,14 +208,22 @@ gc.collect()
 
 print("Creando modelo")
 # %%
+<<<<<<< HEAD
 modelo=models.model_multi_tel(classes=3,filtros=[[32,64],[64,128],[128,64],[32,16]],len_inputs=4,last_dense=[20,5])
 modelo.compile(optimizer=tf.keras.optimizers.Adam(lr=1e-4),loss="categorical_crossentropy",metrics=["acc","AUC","mean_squared_error"])
+=======
+modelo=models.model_multi_tel(classes=7,filtros=[[32,64],[64,128],[128,64],[32,16]],len_inputs=1,last_dense=[20,5])
+modelo.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-4),loss="categorical_crossentropy",metrics=["acc","AUC","mean_squared_error"])
+>>>>>>> 23c185563d572ab3cf3bac0e18f5433fccd4f754
 print("Modelo creado")
 
 # %%
 import gc
 import pickle
+<<<<<<< HEAD
 
+=======
+>>>>>>> 23c185563d572ab3cf3bac0e18f5433fccd4f754
 
 # %%
 class Print_gpu_usage(tf.keras.callbacks.Callback):
@@ -228,11 +244,20 @@ class Print_gpu_usage(tf.keras.callbacks.Callback):
 #con mas datos cargados en memoria
 print("Comienza entrenamiento")
 
+<<<<<<< HEAD
 hist=modelo.fit(x=x_train_tensor_list,y=y_train_tensor,epochs=60, validation_data=(x_test_tensor_list,y_test_tensor),batch_size=128)#,callbacks=[Print_gpu_usage()])     
 
 print("Entrenado el modelo")
 
 modelo.save(f"test_4.h5")
 with open(f"hist_4.pickle","wb") as pick:
+=======
+hist=modelo.fit(x=x_train_tensor_list,y=y_train_tensor,epochs=40, validation_data=(x_test_tensor_list,y_test_tensor),batch_size=64)#,callbacks=[Print_gpu_usage()])     
+
+print("Entrenado el modelo")
+
+modelo.save(f"./results_UGR/test_7_400_1tel_7labels.h5")
+with open(f"./results_UGR/hist_7_400_1tel_7labels.pickle","wb") as pick:
+>>>>>>> 23c185563d572ab3cf3bac0e18f5433fccd4f754
     pickle.dump(hist.history,pick)
 print("FIN")
